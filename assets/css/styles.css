@@ -1,0 +1,630 @@
+@import url('../fonts/fonts.css');
+:root{
+    --red:#d21d3a;
+    --darkred:#b92622;
+    --gris:#263238;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+html,body{
+    font-family: 'source-sans-pro';
+    font-size: 16px;
+    overflow-x: hidden;
+    height: 100%;
+}
+/****************************************************
+************-- CLASSES UTILITAIRES --****************
+*****************************************************/
+
+.section{
+    padding: 2rem 12rem;
+    border-bottom: 1px solid #eeeeee;
+}
+.text-align{
+    text-align: center;
+}
+.checking{
+    border: 1px solid red;
+}
+.footer-link{
+    color: #8d8e92;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+footer-link:hover{
+    color: var(--red);
+}
+.navbar-link{
+    color: #222222;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.navbar-link:hover{
+    color: var(--red);
+}
+.btn{
+    border-radius: 30px;
+    padding:10px;
+    width: 200px;
+    display: inline-block;
+}
+.btn-primary{
+    color: #FFF;
+    background-color: var(--red);
+}
+.btn-primary:hover{
+    background-color: var(--darkred);
+}
+.btn-secondary{
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+.btn-secondary:hover{
+    color: #FFF;
+    background-color: var(--red);
+}
+.title{
+ font-family: "Dosis";
+ text-transform: uppercase;
+ font-size: 24px;
+}
+.subtitle{
+    font-family: "Dosis";
+    text-transform: uppercase;
+    font-size: 20px;
+}
+/**********************************************************************
+***************************** SECTION NAVBAR**************************
+***********************************************************************/
+nav{
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+    z-index: 999;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+#logo{
+   width: 12rem;
+}
+nav .navbar-nav > ul{
+   display: flex;
+   flex-wrap: wrap;
+}
+.navbar-nav .navbar-item{
+    margin-left: 1.5rem;
+    position: relative;
+}
+.navbar-item:hover .navbar-sub{
+    display: block;
+}
+.navbar-item:hover .navbar-pub{
+    display: block;
+}
+.navbar-nav .navbar-sub{
+    position: absolute;
+    display: none;
+    border: 1px solid #eeeeee;
+    background-color: #FFF;
+}
+.sub-item{
+    padding: .5rem 1rem;
+    width: 180px;
+    border-bottom: 1px solid #eeeeee;
+}
+.pub-item{
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #eeeeee;
+}
+.sub-link,.pub-link{
+    text-transform: capitalize;
+    color: #555555;
+}
+.sub-link:hover{
+    color: #FFF;
+}
+.pub-link:hover{
+    color: var(--red);
+}
+.navbar-sub .sub-item:hover{
+    background-color: var(--red);
+}
+.navbar-pub{
+    position: absolute;
+    left: -63rem;
+    right: 0;
+    padding: 1rem;
+    display: none;
+    border: 1px solid #eeeeee;
+    background-color: #FFF;
+    
+}
+.navbar-pub h3{
+    text-transform: uppercase;
+}
+.container-pub{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#logomedia{
+    width: 10rem;
+    border: 1px solid #eeeeee;
+}
+/**********************************************************************
+***************************** SECTION BANNIERE**************************
+***********************************************************************/
+.banniere{
+    background: url('../images/asset 43.webp');
+    background-size: cover;
+    background-position: 90%;
+    height: 100%;
+}
+.banniere-texte{
+    font-size: 1.3rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/*centrer verticalement le txt*/
+.banniere .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+.banniere-titre{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.logyred{
+    color: var(--red);
+}
+
+/**********************************************************************
+***************************** SECTION A PROPOS**************************
+***********************************************************************/
+.apropos{
+    padding-bottom: 15rem;
+}
+.apropos .container{
+    display: flex;
+    color:#666666;
+}
+.apropos-texte,.apropos-image{
+    width: 50%;
+    position: relative;
+}
+.apropos-femme{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+.apropos img{
+    max-width: 58%;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+.apropos-texte{
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/**********************************************************************
+***************************** SECTION POURQUOI NOUS********************
+***********************************************************************/
+.pourquoinous{
+    background-color: var(--red);
+    color: #eeeeee;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.pourquoinous .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pourquoinous-texte{
+    font-size: 1.1rem;
+    width: 70%;
+    line-height: 2rem;
+}
+.pourquoinous-texte .liste{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding-top: 2rem;
+}
+.fond-gris{
+    background: #f3f3f3;
+    padding: 78px 45px 38px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.13);
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    top: 0;
+    width: 20%;
+    color: #dddddd;
+}
+.fond-gris h2{
+    color: #222222;
+}
+.horaires{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #dddddd;
+    margin-bottom: .3rem;
+}
+.gras{
+    font-weight: bold;
+}
+.red{
+    color: var(--red);
+    text-decoration: underline;
+}
+/**********************************************************************
+***************************** SECTION NOTRE SAVOIR FAIRE****************
+***********************************************************************/
+.savoirfaire header{
+    text-align: center;
+}
+.savoirfaire header p{
+    width: 45%;
+    margin: auto;
+}
+.savoirfaire .container{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+.card{
+    width: 49%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.card-image{
+    height: 3rem;
+}
+.card-body{
+    text-align: justify;
+}
+.card-body h2{
+    text-transform: uppercase;
+}
+.card-body a{
+    color: var(--red);
+}
+.card-body a:hover{
+    color: var(--darkred);
+}
+.card-body p:nth-child(2){
+    margin: .7rem 0;
+}
+
+/**********************************************************************
+***************************** SECTION PROGRAM MANAGER VISA****************
+***********************************************************************/
+.programvisa header{
+    text-align: center;
+}
+.programvisa header p{
+    width: 45%;
+    margin: auto;
+}
+
+.programvisa .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.visa:nth-child(1){
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    align-content: flex-start;
+}
+.visa:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+
+}
+
+.visa img{
+    width: 8rem;
+}
+.visa:nth-child(1) p{
+    display: flex;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.visa:nth-child(1) span{
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+}
+.visa:nth-child(1) a{
+    display: flex;
+    flex-direction: column;
+} 
+.d-flex{
+    display: flex;
+    gap: 1rem;
+}
+.d-flex div:nth-child(1){
+    line-height: 2rem;
+    text-align: justify;
+}
+.d-flex img{
+    width: 20rem;
+}
+.d-flex div:nth-child(2){
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+/**********************************************************************
+***************************** SECTION STATISTiIQUES*********************
+***********************************************************************/
+.statistique{
+    background-color: var(--red);
+}
+.statistique .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.statistique img{
+    width: 3rem;
+}
+.statistique-element{
+    border: 1px solid #eeeeee;
+    padding: 2rem;
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #eeeeee;
+}
+.statistique-element h3{
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+/**********************************************************************
+***************************** SECTION PUBLICITAIRE*********************
+***********************************************************************/
+.regiepub header{
+    text-align: center;
+}
+.regiepub header p{
+    width: 45%;
+    margin: auto;
+}
+
+.regiepub .container{
+    display: flex;
+    justify-content: space-between;
+}
+.regiepub img{
+    width: 2.5rem;
+}
+.pub{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.5rem;
+}
+.pub h3{
+    text-transform: uppercase;
+    margin-bottom: .6rem;
+}
+.pub-element{
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    align-items: flex-start;
+}
+.pub-img{
+    margin-left: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+    text-align: center;
+    padding: 20px;
+}
+.pub .btn-primary{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+}
+.pub-micro, .pub-micro img{
+    height: 100%;
+    width: 100%;
+}
+/**********************************************************************
+***************************** SECTION TEMOIGNAGES**********************
+***********************************************************************/
+.temoignage{
+    background-color: var(--red);
+    color: #eeeeee;
+}
+.temoignage h1{
+    text-align: center;
+    color: #FFF;
+}
+.temoignage .container{
+    display: flex;
+    justify-content: space-between;
+}
+.temoignage-element{
+    width: 40%;
+    text-align: justify;
+}
+.profile{
+    text-align: center;
+}
+.temoignage img{
+    border-radius: 50%;
+    width: 100px;
+}
+
+/**********************************************************************
+***************************** SECTION ACTUALITE**************************
+***********************************************************************/
+.actualite h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.actualite .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.actualite-card{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+.actualite img{
+width: 100%;
+}
+.actualite-card-body{
+    display: flex;
+    padding: 1rem;
+    align-content: flex-start;
+}
+.actualite-card-body .date{
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #FFF;
+    font-weight: bold;
+    background-color: var(--red);
+    margin-right: 10px;
+}
+.evenement{
+    font-weight: bold;
+}
+.actualite-card-btn{
+    margin-bottom: 10px;
+}
+
+
+/**********************************************************************
+***************************** SECTION PARTENAIRES*********************
+***********************************************************************/
+.partenaire header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.partenaire header p{
+    width: 45%;
+    margin: auto;
+}
+
+.partenaire .container{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.partenaire img{
+    width: 10rem;
+}
+/**********************************************************************
+***************************** SECTION FOOTER**************************
+***********************************************************************/
+footer{
+    background: #263238;
+    color: #8D8E92;
+}
+footer a{
+    font-size: 15px;
+}
+footer a:hover{
+    color: var(--red);
+}
+footer li{
+    padding: 8px 0;
+}
+footer .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.copyrith-container{
+    text-align: center;
+}
+.copyrith-container p:nth-child(2) img{
+    width: 7rem;
+}
+.copyrith-container p:nth-child(3) img{
+    width: 2rem;
+    height: auto;
+}
+.copyrith-container p:nth-child(3) a{
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    padding: .5rem;
+}
+.navf{
+    width: 230px;
+    padding: 1rem;
+}
+.navf h3{
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 1rem;
+}
+footer .btn-primary{
+    display: inline-block;
+ width: 230px;
+ text-align: center;
+ color: #FFF;
+}
+footer .btn-primary:hover{
+    color: #FFF;
+}
+
+
+
+/**********************************************************************
+****************************SECTION RESPONSIVE***********************
+***********************************************************************/
+@media screen and (max-width:768px) {
+    .section{
+        padding: 1rem;
+        border-bottom: 1px solid #eeeeee;
+    }
+    nav .navbar-nav > ul{
+     flex-direction: column;
+    }
+    .fond-gris{
+        position: static;
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+}
