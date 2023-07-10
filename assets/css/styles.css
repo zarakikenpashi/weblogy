@@ -344,7 +344,7 @@ nav .navbar-nav > ul{
 .visa:nth-child(2){
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 750px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     padding: 1rem;
 
