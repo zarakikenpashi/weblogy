@@ -394,6 +394,7 @@ justify-content: space-around;
 .statistique .container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 2rem 0;
 }
 .statistique img{
@@ -425,6 +426,7 @@ justify-content: space-around;
 .regiepub .container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .regiepub img{
     width: 2.5rem;
@@ -477,6 +479,7 @@ justify-content: space-around;
 .temoignage .container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .temoignage-element{
     width: 40%;
