@@ -580,6 +580,14 @@ main h5{
     font-family: "Dossis";
     margin: 1rem 0;
 }
+main .cartevisa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .cartevisa img{
+    width: 15rem;
+}
 /**********************************************************************
 ***************************** SECTION FOOTER**************************
 ***********************************************************************/
